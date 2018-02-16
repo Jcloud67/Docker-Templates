@@ -8,11 +8,11 @@
   <Privileged>false</Privileged>
   <Support/>
   <Project>https://storj.io</Project>
-  <Overview>STORJ DAEMON Docker - using Storj public automated build.&#xD;
+  <Overview>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#xD;
       https://www.storj.io&#xD;
       https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
 &#xD;
-   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  This is only the Storj Daemon and CLI tool.&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
@@ -20,7 +20,6 @@ SETUP REQUIREMENTS:&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host.&#xD;
-&#xD;
 &#xD;
 STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
@@ -28,20 +27,20 @@ docker exec Storj storjshare status&#xD;
 --------------------------------------------------</Overview>
   <Category>Cloud: Tools: Other: Network:Other</Category>
   <WebUI/>
-  <TemplateURL/>
-  <Icon>/plugins/dynamix.docker.manager/images/StorjLogo.png</Icon>
+  <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
+  <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
-  <DateInstalled>1518751881</DateInstalled>
+  <DateInstalled>1518755886</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <DonateImg/>
-  <MinVer>6.0</MinVer>
-  <Description>STORJ DAEMON Docker - using Storj public automated build.&#xD;
+  <MinVer>6.4.1</MinVer>
+  <Description>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#xD;
       https://www.storj.io&#xD;
       https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
 &#xD;
-   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  This is only the Storj Daemon and CLI tool.&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
@@ -49,7 +48,6 @@ SETUP REQUIREMENTS:&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host.&#xD;
-&#xD;
 &#xD;
 STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
