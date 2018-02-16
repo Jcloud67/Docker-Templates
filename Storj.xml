@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Storj</Name>
+  <Repository>oreandawe/storjshare-cli</Repository>
+  <Registry>https://hub.docker.com/r/oreandawe/storjshare-cli/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://storj.io</Project>
+  <Overview>STORJ DAEMON Docker - using Storj public automated build.&#xD;
+      https://www.storj.io&#xD;
+      https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
+&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  This is only the Storj Daemon and CLI tool.&#xD;
+&#xD;
+SETUP REQUIREMENTS:&#xD;
+-------------------------------------&#xD;
+    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
+    2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
+    3.   Your Ethereum-based wallet address.&#xD;
+    4.   The max allowed space STORJ can take up on the host.&#xD;
+&#xD;
+&#xD;
+STORJ DAEMON STATUS:  (In your command line)&#xD;
+--------------------------------------------------&#xD;
+docker exec Storj storjshare status&#xD;
+--------------------------------------------------</Overview>
+  <Category>Cloud: Tools: Other: Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/StorjLogo.png</Icon>
+  <ExtraParams>--restart=always</ExtraParams>
+  <PostArgs/>
+  <DateInstalled>1518751881</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <DonateImg/>
+  <MinVer>6.0</MinVer>
+  <Description>STORJ DAEMON Docker - using Storj public automated build.&#xD;
+      https://www.storj.io&#xD;
+      https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
+&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  This is only the Storj Daemon and CLI tool.&#xD;
+&#xD;
+SETUP REQUIREMENTS:&#xD;
+-------------------------------------&#xD;
+    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
+    2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
+    3.   Your Ethereum-based wallet address.&#xD;
+    4.   The max allowed space STORJ can take up on the host.&#xD;
+&#xD;
+&#xD;
+STORJ DAEMON STATUS:  (In your command line)&#xD;
+--------------------------------------------------&#xD;
+docker exec Storj storjshare status&#xD;
+--------------------------------------------------</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000-4003</HostPort>
+        <ContainerPort>4000-4003</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/storj</HostDir>
+      <ContainerDir>/storj</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>0xe09a2b205d3a76196a88505f059c78df7d7c556f</Value>
+      <Name>WALLET_ADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3TB</Value>
+      <Name>SHARE_SIZE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Storj network ports" Target="4000-4003" Default="4000-4003" Mode="tcp" Description="Network ports for Storj&#13;&#10;Default for Storj are 4000-4003" Type="Port" Display="always" Required="true" Mask="false">4000-4003</Config>
+  <Config Name="Path of Storj share on array" Target="/storj" Default="" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
+  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false">0xe09a2b205d3a76196a88505f059c78df7d7c556f</Config>
+  <Config Name="Storj MAX allocation of size" Target="SHARE_SIZE" Default="" Mode="" Description="Container Variable: SHARE_SIZE.  Example: 500GB, 1TB, 10TB." Type="Variable" Display="always" Required="true" Mask="false">3TB</Config>
+</Container>
