@@ -74,7 +74,7 @@ docker exec Storj storjshare status&#xD;
   </Data>
   <Environment>
     <Variable>
-      <Value>0xe09a2b205d3a76196a88505f059c78df7d7c556f</Value>
+      <Value></Value>
       <Name>WALLET_ADDRESS</Name>
       <Mode/>
     </Variable>
@@ -86,6 +86,6 @@ docker exec Storj storjshare status&#xD;
   </Environment>
   <Config Name="Storj network ports" Target="4000-4003" Default="4000-4003" Mode="tcp" Description="Network ports for Storj&#13;&#10;Default for Storj are 4000-4003" Type="Port" Display="always" Required="true" Mask="false">4000-4003</Config>
   <Config Name="Path of Storj share on array" Target="/storj" Default="" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
-  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false">0xe09a2b205d3a76196a88505f059c78df7d7c556f</Config>
+  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Storj MAX allocation of size" Target="SHARE_SIZE" Default="" Mode="" Description="Container Variable: SHARE_SIZE.  Example: 500GB, 1TB, 10TB." Type="Variable" Display="always" Required="true" Mask="false">3TB</Config>
 </Container>
