@@ -12,7 +12,7 @@
       https://www.storj.io&#xD;
       https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
 &#xD;
-   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn STORJ an Ethereum asset.  **The template author makes no guarantee that STORJ or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
@@ -40,7 +40,7 @@ docker exec Storj storjshare status&#xD;
       https://www.storj.io&#xD;
       https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
 &#xD;
-   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn STORJ an Ethereum asset.  **The template author makes no guarantee that STORJ or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
