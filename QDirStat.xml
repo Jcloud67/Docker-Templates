@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>QDirStat</Name>
+  <Repository>mjdumont1/qdirstat</Repository>
+  <Registry>https://hub.docker.com/r/mjdumont1/qdirstat</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>QDirStat is a graphical application displaying files as graphically proportional rectangles to their storage size on disk, allowing the user to see what is taking up space on their volumes. &#xD;
+&#xD;
+#   Docker Application access is through RDP, host port defaults at: 33389.&#xD;
+      Default MS RDP port is: 3389   (for reference) .&#xD;
+&#xD;
+#   "Array" template field: The host path you want to scan using QDirStat, the Docker location is /files.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>http://orig04.deviantart.net/3d19/f/2011/196/7/5/q_dir_by_veer1-d3ta2r4.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1518752109</DateInstalled>
+  <DonateText>Scooby Doo, "Coin! Coin!"</DonateText>
+  <DonateLink/>
+  <DonateImg/>
+  <MinVer>6.0</MinVer>
+  <Description>QDirStat is a graphical application displaying files as graphically proportional rectangles to their storage size on disk, allowing the user to see what is taking up space on their volumes. &#xD;
+&#xD;
+#   Docker Application access is through RDP, host port defaults at: 33389.&#xD;
+      Default MS RDP port is: 3389   (for reference) .&#xD;
+&#xD;
+#   "Array" template field: The host path you want to scan using QDirStat, the Docker location is /files.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>33389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/files</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="RDP" Target="3389" Default="" Mode="tcp" Description="RDP" Type="Port" Display="always" Required="true" Mask="false">33389</Config>
+  <Config Name="Array" Target="/files" Default="" Mode="ro" Description="Container Path: /files&#13;&#10;&#13;&#10;Host location should be at what you want to survey using QDirStat." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+</Container>
