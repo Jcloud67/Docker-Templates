@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Cacti</Name>
+  <Repository>quantumobject/docker-cacti</Repository>
+  <Registry>https://hub.docker.com/r/quantumobject/docker-cacti/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/QuantumObject/docker-cacti</Project>
+  <Overview>Cacti is a complete network graphing solution designed to harness the power of RRDTool's data storage and graphing functionality.  For full details go to: www.cacti.net.&#xD;
+&#xD;
+SETUP AND CONFIGURATION:&#xD;
+---------------------------------------------&#xD;
+     0.  SNMP poller default port is 161UDP. &#xD;
+     1.  If you have an SNMP poller plug-in already installed on your unRAID host, you'll find it will conflict with this Docker. Either uninstall the SNMP plugin you are using, or make the changes to have both work (author assumes you know what you're doing).&#xD;
+     2.  During initial setup the path to SPINE is incorrect. Change it to:&#xD;
+          /usr/local/spine/bin/spine&#xD;
+     3. First login  --  userid: admin    &#xD;
+                         password: admin&#xD;
+&#xD;
+FIRST RUN (Recommendation):&#xD;
+---------------------------------------------&#xD;
+   On left hand menu, Under "Automation" click on, "Networks"  THEN "Test Network" on right-side main frame.  In Subnet Range change this to fit your network. Click "Save" THEN "Return" at the bottom.&#xD;
+   Next click on the checkbox for "Test Network" THEN in "Choose an action" box click ENABLE --&amp;gt; GO &#xD;
+  Check the checkbox for "test Network" again THEN choose "Discover now"</Overview>
+  <Category>Productivity: Tools: Other: Network:Management Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8180]/cacti</WebUI>
+  <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
+  <Icon>https://www.cacti.net/images/cacti.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DateInstalled>1518926953</DateInstalled>
+  <DonateText>"Coin! Coin!" -- Scooby Doo</DonateText>
+  <DonateLink/>
+  <DonateImg/>
+  <MinVer>6.4.1</MinVer>
+  <Description>Cacti is a complete network graphing solution designed to harness the power of RRDTool's data storage and graphing functionality.  For full details go to: www.cacti.net.&#xD;
+&#xD;
+SETUP AND CONFIGURATION:&#xD;
+---------------------------------------------&#xD;
+     0.  SNMP poller default port is 161UDP. &#xD;
+     1.  If you have an SNMP poller plug-in already installed on your unRAID host, you'll find it will conflict with this Docker. Either uninstall the SNMP plugin you are using, or make the changes to have both work (author assumes you know what you're doing).&#xD;
+     2.  During initial setup the path to SPINE is incorrect. Change it to:&#xD;
+          /usr/local/spine/bin/spine&#xD;
+     3. First login  --  userid: admin    &#xD;
+                         password: admin&#xD;
+&#xD;
+FIRST RUN (Recommendation):&#xD;
+---------------------------------------------&#xD;
+   On left hand menu, Under "Automation" click on, "Networks"  THEN "Test Network" on right-side main frame.  In Subnet Range change this to fit your network. Click "Save" THEN "Return" at the bottom.&#xD;
+   Next click on the checkbox for "Test Network" THEN in "Choose an action" box click ENABLE --&amp;gt; GO &#xD;
+  Check the checkbox for "test Network" again THEN choose "Discover now"</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>161</HostPort>
+        <ContainerPort>161</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8180</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Cacti</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="SNMP Scan port" Target="161" Default="161" Mode="udp" Description="SNMP scan, port 161 UDP" Type="Port" Display="always" Required="true" Mask="false">161</Config>
+  <Config Name="webui" Target="80" Default="8180" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8180</Config>
+  <Config Name="configs" Target="/config" Default="/mnt/user/appdata/Cacti" Mode="rw" Description="Docker configuration files folder" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Cacti</Config>
+</Container>
