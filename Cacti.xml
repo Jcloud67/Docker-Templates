@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://lime-technology.com/forums/topic/69470-support-cacti/</Support>
   <Project>https://github.com/QuantumObject/docker-cacti</Project>
   <Overview>Cacti is a complete network graphing solution designed to harness the power of RRDTool's data storage and graphing functionality.  For full details go to: www.cacti.net.  The stated minium unRAID version of 6.4.1 is simply because that is the version I run and can test.&#xD;
 &#xD;
@@ -31,7 +31,7 @@ FIRST RUN (Recommendation):&#xD;
   <Icon>https://www.cacti.net/images/cacti.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1518927442</DateInstalled>
+  <DateInstalled>1518928050</DateInstalled>
   <DonateText>"Coin! Coin!" -- Scooby Doo</DonateText>
   <DonateLink/>
   <DonateImg/>
