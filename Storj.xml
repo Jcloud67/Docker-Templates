@@ -16,7 +16,7 @@
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
-    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
+    1.   TCP ports 4000-4003 open on host and setup on container (should be set below)&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host; remember to make it less &#xD;
@@ -44,7 +44,7 @@ docker exec Storj storjshare status&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
-    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
+    1.   TCP ports 4000-4003 open on host and setup on container (should be set below)&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host; remember to make it less &#xD;
