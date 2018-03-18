@@ -3,7 +3,7 @@
   <Name>Storj</Name>
   <Repository>oreandawe/storjshare-cli</Repository>
   <Registry>https://hub.docker.com/r/oreandawe/storjshare-cli/</Registry>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Privileged>false</Privileged>
   <Support/>
@@ -12,11 +12,11 @@
       https://www.storj.io&#xD;
       https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
 &#xD;
-   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn STORJ an Ethereum asset.  **The template author makes no guarantee that STORJ or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
-    1.   TCP ports 4000-4003 open on host and setup on container (should be set below)&#xD;
+    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host; remember to make it less &#xD;
@@ -31,7 +31,7 @@ docker exec Storj storjshare status&#xD;
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
-  <DateInstalled>1518757086</DateInstalled>
+  <DateInstalled>1521360254</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <DonateImg/>
@@ -40,11 +40,11 @@ docker exec Storj storjshare status&#xD;
       https://www.storj.io&#xD;
       https://hub.docker.com/r/oreandawe/storjshare-cli/&#xD;
 &#xD;
-   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn STORJ an Ethereum asset.  **The template author makes no guarantee that STORJ or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
+   Storj is a Crypto-asset and P2P cloud storage service. This Docker runs the back-end client for Storj allowing internet users to rent their disk space and earn SJX an Ethereum asset.  **The template author makes no guarantee that SJX or ETH will retain, or increase in fiat value.** This is only the Storj Daemon and CLI tool.&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
-    1.   TCP ports 4000-4003 open on host and setup on container (should be set below)&#xD;
+    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host; remember to make it less &#xD;
@@ -54,14 +54,8 @@ STORJ DAEMON STATUS:  (In your command line)&#xD;
 docker exec Storj storjshare status&#xD;
 --------------------------------------------------</Description>
   <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>4000-4003</HostPort>
-        <ContainerPort>4000-4003</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-    </Publish>
+    <Mode>host</Mode>
+    <Publish/>
   </Networking>
   <Data>
     <Volume>
@@ -72,18 +66,17 @@ docker exec Storj storjshare status&#xD;
   </Data>
   <Environment>
     <Variable>
-      <Value/>
+      <Value>0xe09a2b205d3a76196a88505f059c78df7d7c556f</Value>
       <Name>WALLET_ADDRESS</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>1TB</Value>
       <Name>SHARE_SIZE</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <Config Name="Storj network ports" Target="4000-4003" Default="4000-4003" Mode="tcp" Description="Network ports for Storj&#13;&#10;Default for Storj are 4000-4003" Type="Port" Display="always" Required="true" Mask="false">4000-4003</Config>
   <Config Name="Path of Storj share on array" Target="/storj" Default="" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
-  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Storj MAX allocation of size" Target="SHARE_SIZE" Default="" Mode="" Description="Example: 500GB, 1TB, 10TB." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false">0xe09a2b205d3a76196a88505f059c78df7d7c556f</Config>
+  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="1TB" Mode="" Description="Example: 500GB, 1TB, 4TB." Type="Variable" Display="always" Required="true" Mask="false">1TB</Config>
 </Container>
