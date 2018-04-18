@@ -44,7 +44,7 @@ exit&#xD;
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1524037364</DateInstalled>
+  <DateInstalled>1524037616</DateInstalled>
   <DonateText>Etherium wallet address for the generous </DonateText>
   <DonateLink>0xe09a2b205d3a76196a88505f059c78df7d7c556f</DonateLink>
   <DonateImg/>
@@ -102,7 +102,7 @@ exit&#xD;
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>0.0.0.0</Value>
       <Name>RPCADDRESS</Name>
       <Mode/>
     </Variable>
@@ -112,15 +112,15 @@ exit&#xD;
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>0</Value>
       <Name>NODE_COUNT</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Config Name="Path of Storj share on array" Target="/storj" Default="" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
   <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="100GB" Mode="" Description="Example: 500GB, 1TB, 8TB. MAX SIZE=8TB" Type="Variable" Display="always" Required="true" Mask="false">500GB</Config>
-  <Config Name="RPCADDRESS" Target="RPCADDRESS" Default="0.0.0.0" Mode="" Description="Your DynamicDNS or external DNS address here. If you need a DDNS service, a free one: is duckdns.org" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="100GB" Mode="" Description="Example: 500GB, 1TB, 8TB, for each node you start. MAX SIZE=8TB per node." Type="Variable" Display="always" Required="true" Mask="false">500GB</Config>
+  <Config Name="RPCADDRESS" Target="RPCADDRESS" Default="0.0.0.0" Mode="" Description="Your DynamicDNS or external DNS address here. If you need a DDNS service, a free one: is duckdns.org" Type="Variable" Display="always" Required="false" Mask="false">0.0.0.0</Config>
   <Config Name="Storjstat.com API-Key" Target="MONITORKEY" Default="" Mode="" Description="API-Key for Storjstat.com." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Number of extra nodes" Target="NODE_COUNT" Default="0" Mode="" Description="Storj daemon can run multiple farming nodes at once. The maximum number of nodes per container is number of threads the CPU has. " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Number of extra nodes" Target="NODE_COUNT" Default="0" Mode="" Description="Storj daemon can run multiple farming nodes at once. The maximum number of nodes per container is number of threads the CPU has. " Type="Variable" Display="always" Required="false" Mask="false">0</Config>
 </Container>
