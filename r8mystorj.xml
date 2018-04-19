@@ -27,24 +27,14 @@ OPTIONAL REQUIREMENTS:&#xD;
 STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
 docker exec StorjMonitor storjshare status&#xD;
---------------------------------------------------&#xD;
-&#xD;
-STARTING STORJSTAT.COM MONITOR&#xD;
-* Please note: at this time the monitor doesn't start automatically! * Once the container is running, run the following commands in console:&#xD;
--------------------------------------------------&#xD;
-docker exec -ti StorjMonitor /bin/sh&#xD;
-cd /StorjMonitor&#xD;
-nohup ./storjMonitor.sh&#xD;
-./storjMonitor.sh daemon -F &amp;amp;&#xD;
-exit&#xD;
--------------------------------------------------</Overview>
+--------------------------------------------------</Overview>
   <Category>Cloud: Tools: Other: Network:Other</Category>
   <WebUI/>
   <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DateInstalled>1524037616</DateInstalled>
+  <DateInstalled>1524123849</DateInstalled>
   <DonateText>Etherium wallet address for the generous </DonateText>
   <DonateLink>0xe09a2b205d3a76196a88505f059c78df7d7c556f</DonateLink>
   <DonateImg/>
@@ -68,17 +58,7 @@ OPTIONAL REQUIREMENTS:&#xD;
 STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
 docker exec StorjMonitor storjshare status&#xD;
---------------------------------------------------&#xD;
-&#xD;
-STARTING STORJSTAT.COM MONITOR&#xD;
-* Please note: at this time the monitor doesn't start automatically! * Once the container is running, run the following commands in console:&#xD;
--------------------------------------------------&#xD;
-docker exec -ti StorjMonitor /bin/sh&#xD;
-cd /StorjMonitor&#xD;
-nohup ./storjMonitor.sh&#xD;
-./storjMonitor.sh daemon -F &amp;amp;&#xD;
-exit&#xD;
--------------------------------------------------</Description>
+--------------------------------------------------</Description>
   <Networking>
     <Mode>host</Mode>
     <Publish/>
@@ -97,7 +77,7 @@ exit&#xD;
       <Mode/>
     </Variable>
     <Variable>
-      <Value>500GB</Value>
+      <Value>1TB</Value>
       <Name>SHARE_SIZE</Name>
       <Mode/>
     </Variable>
@@ -116,11 +96,17 @@ exit&#xD;
       <Name>NODE_COUNT</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>Node_</Value>
+      <Name>NODE_DIR</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Config Name="Path of Storj share on array" Target="/storj" Default="" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
   <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="100GB" Mode="" Description="Example: 500GB, 1TB, 8TB, for each node you start. MAX SIZE=8TB per node." Type="Variable" Display="always" Required="true" Mask="false">500GB</Config>
+  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="100GB" Mode="" Description="Example: 500GB, 1TB, 8TB, for each node you start. MAX SIZE=8TB per node." Type="Variable" Display="always" Required="true" Mask="false">1TB</Config>
   <Config Name="RPCADDRESS" Target="RPCADDRESS" Default="0.0.0.0" Mode="" Description="Your DynamicDNS or external DNS address here. If you need a DDNS service, a free one: is duckdns.org" Type="Variable" Display="always" Required="false" Mask="false">0.0.0.0</Config>
   <Config Name="Storjstat.com API-Key" Target="MONITORKEY" Default="" Mode="" Description="API-Key for Storjstat.com." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Number of extra nodes" Target="NODE_COUNT" Default="0" Mode="" Description="Storj daemon can run multiple farming nodes at once. The maximum number of nodes per container is number of threads the CPU has. " Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Custom node-directory name" Target="NODE_DIR" Default="Node_" Mode="" Description="For multiple nodes this builds your directory, example /storj/thisNameHere#/&#13;&#10;&#13;&#10;&#13;&#10;&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">Node_</Config>
 </Container>
