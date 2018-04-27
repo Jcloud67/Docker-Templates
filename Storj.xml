@@ -3,10 +3,10 @@
   <Name>Storj</Name>
   <Repository>oreandawe/storjshare-cli</Repository>
   <Registry>https://hub.docker.com/r/oreandawe/storjshare-cli/</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-storj-and-zugzstorjmonitor/</Support>
   <Project>https://storj.io</Project>
   <Overview>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#xD;
       https://www.storj.io&#xD;
@@ -16,7 +16,7 @@
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
-    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
+    1.   TCP ports 4000 open on host and setup on container (should be set below)&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host; remember to make it less &#xD;
@@ -24,16 +24,19 @@ SETUP REQUIREMENTS:&#xD;
 STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
 docker exec Storj storjshare status&#xD;
---------------------------------------------------</Overview>
+--------------------------------------------------&#xD;
+&#xD;
+Optional Component:&#xD;
+StorjStat is a free community made tool for monitoring your Storj farming node(s), the tool gives you both real-time and historical analysis. See storjstat.com and calxibe/StorjMonitor for more information. The StorjStat API is optionally supported by using the STORJ_MONITOR_API_KEY environment variable when starting the storjshare-cli Docker container.</Overview>
   <Category>Cloud: Tools: Other: Network:Other</Category>
   <WebUI/>
   <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
-  <DateInstalled>1521360254</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
+  <DateInstalled>1524798166</DateInstalled>
+  <DonateText>Etherum or STORJ tokens for template author</DonateText>
+  <DonateLink>0xe09a2b205d3a76196a88505f059c78df7d7c556f</DonateLink>
   <DonateImg/>
   <MinVer>6.4.1</MinVer>
   <Description>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#xD;
@@ -44,7 +47,7 @@ docker exec Storj storjshare status&#xD;
 &#xD;
 SETUP REQUIREMENTS:&#xD;
 -------------------------------------&#xD;
-    1.   TCP ports 400-4003 open on host and setup on container (should be set below)&#xD;
+    1.   TCP ports 4000 open on host and setup on container (should be set below)&#xD;
     2.   Path on host for Storj data to sit.  IE: make a user share,  /mnt/user/storj &#xD;
     3.   Your Ethereum-based wallet address.&#xD;
     4.   The max allowed space STORJ can take up on the host; remember to make it less &#xD;
@@ -52,10 +55,19 @@ SETUP REQUIREMENTS:&#xD;
 STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
 docker exec Storj storjshare status&#xD;
---------------------------------------------------</Description>
+--------------------------------------------------&#xD;
+&#xD;
+Optional Component:&#xD;
+StorjStat is a free community made tool for monitoring your Storj farming node(s), the tool gives you both real-time and historical analysis. See storjstat.com and calxibe/StorjMonitor for more information. The StorjStat API is optionally supported by using the STORJ_MONITOR_API_KEY environment variable when starting the storjshare-cli Docker container.</Description>
   <Networking>
-    <Mode>host</Mode>
-    <Publish/>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4000-4003</HostPort>
+        <ContainerPort>4000-4003</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
   <Data>
     <Volume>
@@ -66,7 +78,7 @@ docker exec Storj storjshare status&#xD;
   </Data>
   <Environment>
     <Variable>
-      <Value>0xe09a2b205d3a76196a88505f059c78df7d7c556f</Value>
+      <Value/>
       <Name>WALLET_ADDRESS</Name>
       <Mode/>
     </Variable>
@@ -75,8 +87,21 @@ docker exec Storj storjshare status&#xD;
       <Name>SHARE_SIZE</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>0.0.0.0</Value>
+      <Name>RPCADDRESS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>STORJ_MONITOR_API_KEY</Name>
+      <Mode/>
+    </Variable>
   </Environment>
-  <Config Name="Path of Storj share on array" Target="/storj" Default="" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
-  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false">0xe09a2b205d3a76196a88505f059c78df7d7c556f</Config>
-  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="1TB" Mode="" Description="Example: 500GB, 1TB, 4TB." Type="Variable" Display="always" Required="true" Mask="false">1TB</Config>
+  <Config Name="Path of Storj share on array" Target="/storj" Default="/mnt/user/storj" Mode="rw" Description="Enter location of your storj share folder on unRAID host. " Type="Path" Display="always" Required="true" Mask="false">/mnt/user/storj</Config>
+  <Config Name="Wallet Address" Target="WALLET_ADDRESS" Default="" Mode="" Description="Value should be changed to your Wallet address you use for payout." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="SHARE_SIZE" Target="SHARE_SIZE" Default="3TB" Mode="" Description="Example: 500GB, 1TB, 10TB." Type="Variable" Display="always" Required="true" Mask="false">1TB</Config>
+  <Config Name="RPC Host Address" Target="RPCADDRESS" Default="0.0.0.0" Mode="" Description="DDNS, DNS, or external IP address" Type="Variable" Display="always" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="Storjstat.com Monitor API-Key" Target="STORJ_MONITOR_API_KEY" Default="" Mode="" Description="Container Variable: STORJ_MONITOR_API_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Storj TCP ports" Target="4000-4003" Default="4000-4003" Mode="tcp" Description="Storj service uses TCP 4000. However, if it doesn't find an open connection it will try to tunnel using ports 4001-4003." Type="Port" Display="always" Required="false" Mask="false">4000-4003</Config>
 </Container>
