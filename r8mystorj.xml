@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-and-storj</Support>
+  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-jcloud-cryptocoin-templates/</Support>
   <Project>https://github.com/Jcloud67/docker-storjshare-cli</Project>
   <Overview>Storj daemon + CLI; multiple-node in template support; Storjstat.com monitor installed.&#xD;
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#xD;
