@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-storj-and-zugzstorjmonitor/</Support>
+  <Support>https://lime-technology.com/forums/topic/69422-support-qdirstat-jcloud-cryptocoin-templates/</Support>
   <Project>https://storj.io</Project>
   <Overview>STORJ DAEMON Docker - using Storj public automated build. This template, nor author, are affiliated with storj.io. &#xD;
       https://www.storj.io&#xD;
