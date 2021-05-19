@@ -28,7 +28,7 @@ docker exec Storj storjshare status&#xD;
 &#xD;
 Optional Component:&#xD;
 StorjStat is a free community made tool for monitoring your Storj farming node(s), the tool gives you both real-time and historical analysis. See storjstat.com and calxibe/StorjMonitor for more information. The StorjStat API is optionally supported by using the STORJ_MONITOR_API_KEY environment variable when starting the storjshare-cli Docker container.</Overview>
-  <Category>Cloud: Tools: Other: Network:Other</Category>
+  <Category>Cloud: Tools: Other: Network:Other Crypto:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
