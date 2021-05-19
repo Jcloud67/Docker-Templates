@@ -15,7 +15,7 @@ https://www.storj.io&#xD;
 This is Storj Lab's V3 node client. To participate you must first have to have an authorization token, to join waitlist go to: https://storj.io/sign-up-farmer&#xD;
 &#xD;
 This template is for running the Docker application only, please follow Storj Lab directions in the Auth Token email link to setup your Node Identity files  -  this is under "Setup" on https://github.com/storj/storj/wiki/Storage-Node-Setup-Instructions</Overview>
-  <Category>Cloud: Other:</Category>
+  <Category>Cloud: Other: Crypto:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>

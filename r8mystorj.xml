@@ -28,7 +28,7 @@ STORJ DAEMON STATUS:  (In your command line)&#xD;
 --------------------------------------------------&#xD;
 docker exec StorjMonitor storjshare status&#xD;
 --------------------------------------------------</Overview>
-  <Category>Cloud: Tools: Other: Network:Other</Category>
+  <Category>Cloud: Tools: Other: Network:Other Crypto:</Category>
   <WebUI/>
   <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
   <Icon>http://i.imgur.com/hfyAiA4.png</Icon>
