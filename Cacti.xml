@@ -26,7 +26,7 @@ FIRST RUN (Recommendation):&#xD;
    Next click on the checkbox for "Test Network" THEN in "Choose an action" box click ENABLE --&amp;gt; GO &#xD;
   Check the checkbox for "test Network" again THEN choose "Discover now"</Overview>
   <Category>Productivity: Tools: Other: Network:Management Network:Other</Category>
-  <WebUI>http://[IP]:[PORT:8180]/cacti</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/cacti</WebUI>
   <TemplateURL>https://github.com/Jcloud67/Docker-Templates</TemplateURL>
   <Icon>https://www.cacti.net/images/cacti.png</Icon>
   <ExtraParams/>
